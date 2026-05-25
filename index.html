@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writo AI // Viral Content Compiler</title>
+    <!-- SEO Meta -->
+    <meta name="description" content="An advanced content compiler designed to repurpose articles and engineering drafts into high-impact X threads, LinkedIn posts, and short video scripts.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- 3D Perspective Grid Background -->
+    <div class="cyber-background">
+        <div class="mesh-aurora"></div>
+        <div class="perspective-grid">
+            <div class="grid-lines"></div>
+        </div>
+        <div class="vertical-nodes"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Header Section -->
+        <header class="app-header">
+            <div class="tech-lines-left"></div>
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i data-lucide="binary"></i>
+                </div>
+                <h1>WRITO <span class="accent-glow">// CORE</span></h1>
+            </div>
+            <p class="subtitle">Advanced content compiler for developers, builders, and technical writers</p>
+            <div class="header-status">
+                <span class="status-indicator online"></span>
+                <span class="status-text font-mono">SYS_STATUS: READY // V1.0.0</span>
+            </div>
+            <div class="tech-lines-right"></div>
+        </header>
+
+        <!-- Main Workspace -->
+        <main class="workspace-grid">
+            
+            <!-- Left Panel: Input & Config -->
+            <section class="panel input-panel" id="config-panel">
+                <div class="card-glare"></div>
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <i data-lucide="sliders-horizontal"></i>
+                        <h2>Compiler Settings</h2>
+                    </div>
+                    <div class="preset-selector-container">
+                        <span class="label-tech font-mono">LOAD_SPEC</span>
+                        <select id="preset-selector" class="preset-dropdown font-mono">
+                            <option value="" disabled selected>Select specifications...</option>
+                            <option value="remote-work">SPEC_01: The Future of Work</option>
+                            <option value="ai-coding">SPEC_02: AI Coding Paradigms</option>
+                            <option value="habit-loops">SPEC_03: Atomic Habit Systems</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Input block -->
+                <div class="form-group">
+                    <div class="label-row">
+                        <label for="source-text" class="font-mono"><span class="tech-bullet">::</span> SOURCE_INPUT</label>
+                        <span id="char-count" class="counter-text font-mono">CHAR_COUNT: 0</span>
+                    </div>
+                    <div class="textarea-wrapper">
+                        <textarea id="source-text" placeholder="Insert markdown documentation, essay drafts, or raw concepts here. A minimum of 50 characters is recommended for structural parsing..."></textarea>
+                        <button id="clear-input-btn" class="icon-btn-text font-mono" title="Purge Input Buffer">
+                            <i data-lucide="refresh-cw"></i> CLEAR_BUFFER
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tone Selector -->
+                <div class="form-group">
+                    <label class="font-mono"><span class="tech-bullet">::</span> TONE_ENGINE_COEFFICIENT</label>
+                    <div class="tone-grid" id="tone-grid">
+                        
+                        <div class="tone-card active 3d-card" data-tone="professional">
+                            <div class="card-glare"></div>
+                            <div class="tone-icon"><i data-lucide="briefcase"></i></div>
+                            <div class="tone-info">
+                                <div class="tone-title-row">
+                                    <h3>Professional</h3>
+                                    <span class="tone-tag font-mono">P-01</span>
+                                </div>
+                                <p>Analytical, high-agency, business-oriented.</p>
+                            </div>
+                        </div>
+
+                        <div class="tone-card 3d-card" data-tone="funny">
+                            <div class="card-glare"></div>
+                            <div class="tone-icon"><i data-lucide="terminal"></i></div>
+                            <div class="tone-info">
+                                <div class="tone-title-row">
+                                    <h3>Witty & Satirical</h3>
+                                    <span class="tone-tag font-mono">W-02</span>
+                                </div>
+                                <p>Sarcastic hooks, self-deprecating developer humor.</p>
+                            </div>
+                        </div>
+
+                        <div class="tone-card 3d-card" data-tone="controversial">
+                            <div class="card-glare"></div>
+                            <div class="tone-icon"><i data-lucide="activity"></i></div>
+                            <div class="tone-info">
+                                <div class="tone-title-row">
+                                    <h3>Contrarian</h3>
+                                    <span class="tone-tag font-mono">C-03</span>
+                                </div>
+                                <p>Bold declarations, debate hooks, contrarian structures.</p>
+                            </div>
+                        </div>
+
+                        <div class="tone-card 3d-card" data-tone="inspirational">
+                            <div class="card-glare"></div>
+                            <div class="tone-icon"><i data-lucide="compass"></i></div>
+                            <div class="tone-info">
+                                <div class="tone-title-row">
+                                    <h3>Storytelling</h3>
+                                    <span class="tone-tag font-mono">S-04</span>
+                                </div>
+                                <p>Journey-centric, lessons learned, motivational systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="tone-card 3d-card" data-tone="educational">
+                            <div class="card-glare"></div>
+                            <div class="tone-icon"><i data-lucide="cpu"></i></div>
+                            <div class="tone-info">
+                                <div class="tone-title-row">
+                                    <h3>Actionable Guide</h3>
+                                    <span class="tone-tag font-mono">E-05</span>
+                                </div>
+                                <p>Step-by-step documentation, checklists, heuristics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platform Tabs Selection -->
+                <div class="form-group">
+                    <label class="font-mono"><span class="tech-bullet">::</span> COMPILE_TARGET</label>
+                    <div class="platform-tabs" role="tablist">
+                        <button class="platform-tab active font-mono" data-platform="twitter" role="tab" aria-selected="true" id="tab-twitter">
+                            <i data-lucide="twitter"></i> X_THREAD
+                        </button>
+                        <button class="platform-tab font-mono" data-platform="linkedin" role="tab" aria-selected="false" id="tab-linkedin">
+                            <i data-lucide="linkedin"></i> LINKEDIN_POST
+                        </button>
+                        <button class="platform-tab font-mono" data-platform="script" role="tab" aria-selected="false" id="tab-script">
+                            <i data-lucide="clapperboard"></i> VIDEO_SCRIPT
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <button id="generate-btn" class="primary-btn">
+                    <span class="btn-text">COMPILE CONTENT</span>
+                    <i data-lucide="scan-line"></i>
+                    <div class="btn-glow"></div>
+                </button>
+            </section>
+
+            <!-- Right Panel: Side-by-side Preview -->
+            <section class="panel preview-panel" id="preview-panel">
+                <div class="card-glare"></div>
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <i data-lucide="monitor"></i>
+                        <h2>Preview Output</h2>
+                    </div>
+                    <div class="preview-actions">
+                        <button id="edit-toggle-btn" class="action-btn-pill font-mono">
+                            <i data-lucide="edit-3"></i> <span>EDIT_MODE</span>
+                        </button>
+                        <button id="copy-btn" class="action-btn-pill accent font-mono">
+                            <i data-lucide="copy"></i> <span>EXPORT_COPY</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="preview-container-viewport">
+                    
+                    <!-- Tech Grid Mesh Overlay inside Viewport -->
+                    <div class="viewport-grid-overlay"></div>
+
+                    <!-- Empty State -->
+                    <div class="preview-empty-state" id="empty-state">
+                        <div class="empty-icon">
+                            <i data-lucide="network"></i>
+                        </div>
+                        <h3 class="font-mono">COMPILER_STREAM: IDLE</h3>
+                        <p>No compiled outputs detected in current segment. Load presets or insert custom text into the compiler settings block and execute compile.</p>
+                        <div class="quick-tips font-mono">
+                            <span><i data-lucide="terminal"></i> SYSTEM RUN TIP: LOAD SPEC FROM PRESETS TO INJECT TEST METRICS.</span>
+                        </div>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div class="preview-loading-state hidden" id="loading-state">
+                        <div class="spinner-wrapper">
+                            <div class="neon-spinner"></div>
+                            <div class="spinner-center"><i data-lucide="cpu"></i></div>
+                        </div>
+                        <h3 class="font-mono">COMPILING_BUFFER_FLOW...</h3>
+                        <p id="loading-message" class="font-mono text-muted">PARSING_SENTENCES: STATUS_OK</p>
+                    </div>
+
+                    <!-- Output Preview Mockups -->
+                    <div class="preview-content-wrapper hidden" id="preview-content-wrapper">
+                        
+                        <!-- Telemetry Header Banner -->
+                        <div class="telemetry-banner font-mono">
+                            <div class="telemetry-item"><span class="lbl">T_STATE:</span> <span class="val success">STABLE</span></div>
+                            <div class="telemetry-item"><span class="lbl">MEM_INDEX:</span> <span class="val" id="telemetry-mem">12.4kb</span></div>
+                            <div class="telemetry-item"><span class="lbl">DENSITY:</span> <span class="val" id="telemetry-density">OPTIMAL</span></div>
+                        </div>
+
+                        <!-- 1. Twitter Thread Mockup -->
+                        <div class="mockup-view twitter-mockup" id="mockup-twitter">
+                            <div class="mockup-feed-header">
+                                <span class="feed-title font-mono">X_THREAD // RENDER_MATRIX</span>
+                                <span class="tweet-count-badge font-mono" id="tweet-counter">N_TWEETS: 10</span>
+                            </div>
+                            <div class="tweets-list" id="tweets-list">
+                                <!-- Generated tweets go here -->
+                            </div>
+                        </div>
+
+                        <!-- 2. LinkedIn Post Mockup -->
+                        <div class="mockup-view linkedin-mockup hidden" id="mockup-linkedin">
+                            <div class="linkedin-card">
+                                <div class="linkedin-user-header">
+                                    <div class="linkedin-avatar-fallback font-mono">AM</div>
+                                    <div class="user-details">
+                                        <div class="user-name">Alex Morgan <span class="degree-badge">• 2nd+</span></div>
+                                        <div class="user-headline" id="linkedin-headline">Founding Engineer @ Writo | Designing Next-gen AI Compilers</div>
+                                        <div class="post-time font-mono">SYS_TIMESTAMP // 1H_AGO • <i data-lucide="globe" class="inline-icon"></i></div>
+                                    </div>
+                                    <button class="linkedin-follow-btn font-mono"><i data-lucide="plus"></i> CONNECT</button>
+                                </div>
+                                
+                                <div class="linkedin-body-container">
+                                    <div class="linkedin-content" id="linkedin-text-content" contenteditable="false">
+                                        <!-- Generated post text goes here -->
+                                    </div>
+                                </div>
+
+                                <div class="linkedin-card-footer">
+                                    <div class="social-counts font-mono">
+                                        <span class="reactions-count">👍 1,489 • 💡 301</span>
+                                        <span class="comments-count">194 Comments • 48 Reposts</span>
+                                    </div>
+                                    <div class="social-actions-row">
+                                        <button class="social-action-btn font-mono"><i data-lucide="thumbs-up"></i> Like</button>
+                                        <button class="social-action-btn font-mono"><i data-lucide="message-square"></i> Comment</button>
+                                        <button class="social-action-btn font-mono"><i data-lucide="repeat"></i> Repost</button>
+                                        <button class="social-action-btn font-mono"><i data-lucide="send"></i> Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. TikTok/Reel Script Mockup -->
+                        <div class="mockup-view script-mockup hidden" id="mockup-script">
+                            <div class="script-header">
+                                <div class="script-meta">
+                                    <span class="meta-label font-mono">SHORT_VIDEO_LOG // TIMECODE_MAPPED</span>
+                                    <span class="meta-duration font-mono" id="script-duration">EST_DUR: 50S</span>
+                                </div>
+                                <div class="script-tip font-mono">
+                                    <i data-lucide="activity"></i> HEURISTIC: ENGAGE RETENTION METRIC IN THE INITIAL 3S.
+                                </div>
+                            </div>
+                            
+                            <div class="script-table">
+                                <div class="script-row header-row font-mono">
+                                    <div class="col-time">TIMECODE</div>
+                                    <div class="col-scene">VISUAL_SCENE_INSTRUCTION</div>
+                                    <div class="col-audio">AUDIO_SPEECH_VOICEOVER</div>
+                                </div>
+                                <div class="script-body-container" id="script-rows-container">
+                                    <!-- Generated script rows go here -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden font-mono">
+        <i data-lucide="check-circle" class="toast-icon"></i>
+        <span id="toast-message">COPY_OK</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
